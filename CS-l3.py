@@ -13,7 +13,6 @@ root.geometry("800x450")
 # set the title of the Window
 root.title("Pavneet's Geo Quiz")
 
-print("hello")
 
 root.mainloop()
 
