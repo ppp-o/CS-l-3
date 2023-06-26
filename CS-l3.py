@@ -10,7 +10,12 @@ root = Tk()
  
 # set the size of the GUI Window
 root.geometry("800x500")
+
+# set minimum window size value
+root.minsize(800, 500)
  
+# set maximum window size value
+root.maxsize(800, 500)
 # set the title of the Window
 root.title("Pavneet's Geo Quiz")
 
@@ -25,9 +30,13 @@ my_label.place(x=0, y=0, relwidth=1, relheight=1)
 my_frame = Frame(root)
 my_frame.pack(pady=20)
 
-# Add some buttons and now put buttons inside the frame just added
-my_button1 = Button(my_frame, text="click to start")
-my_button1.grid(row=0, column=0, padx=20)
+# making button function by allowing it to take you into a new window 
+def openwindow():
+    return True
+
+btn = Button(root, text="click to start", command=openwindow)
+btn.pack(padx=20, pady=20)
+
 
 
 root.mainloop()
