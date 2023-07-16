@@ -4,7 +4,6 @@ from tkinter import *
 # and import messagebox as mb from tkinter
 from tkinter import messagebox as mb
 
-
 # Create a GUI Window
 root = Tk()
  
@@ -13,9 +12,9 @@ root.geometry("800x500")
 
 # set minimum window size value
 root.minsize(800, 500)
- 
 # set maximum window size value
 root.maxsize(800, 500)
+
 # set the title of the Window
 root.title("Pavneet's Geo Quiz")
 
@@ -30,18 +29,11 @@ my_label.place(x=0, y=0, relwidth=1, relheight=1)
 my_frame = Frame(root)
 my_frame.pack(pady=20)
 
+btn = Button(root, text="click to start") #, command=openwindow)
+btn.place(x=128, y=332)
+
 # making button function by allowing it to take you into a new window 
-def openwindow():
-    return True
-
-btn = Button(root, text="click to start", command=openwindow)
-btn.pack(padx=20, pady=20)
-
-
+#def openwindow():
+#   return True
 
 root.mainloop()
-
-
-
-
-
