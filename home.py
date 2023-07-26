@@ -16,7 +16,7 @@ root.minsize(800, 500)
 root.maxsize(800, 500)
 
 # set the title of the Window
-root.title("Pavneet's Geo Quiz")
+root.title("Pavneets Geo Quiz")
 
 # Define Image
 bg = PhotoImage(file="image/Homewindow.new.png")
@@ -32,8 +32,24 @@ my_frame.pack(pady=20)
 btn = Button(root, text="click to start") #, command=openwindow)
 btn.place(x=128, y=332)
 
-# making button function by allowing it to take you into a new window 
-#def openwindow():
-#   return True
+#creating new pages 
+
+def nextPage():
+    root.destroy()
+    import quizlevels
+
+Label(
+    root,
+    text="Quiz levels",
+    padx=20,
+    pady=20,
+    bg='#5d8a82',
+).pack(expand=True, fill=BOTH)
+
+Button(
+    root, 
+    text="click to start", 
+    command=nextPage
+    ).pack(fill=X, expand=TRUE, side=LEFT)
 
 root.mainloop()
