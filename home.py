@@ -29,27 +29,16 @@ my_label.place(x=0, y=0, relwidth=1, relheight=1)
 my_frame = Frame(root)
 my_frame.pack(pady=20)
 
-btn = Button(root, text="click to start") #, command=openwindow)
-btn.place(x=128, y=332)
-
 #creating new pages 
 
 def nextPage():
     root.destroy()
     import quizlevels
 
-Label(
-    root,
-    text="Quiz levels",
-    padx=20,
-    pady=20,
-    bg='#5d8a82',
-).pack(expand=True, fill=BOTH)
-
 Button(
     root, 
     text="click to start", 
     command=nextPage
-    ).pack(fill=X, expand=TRUE, side=LEFT)
+    ).place(x=128, y=332)
 
 root.mainloop()
