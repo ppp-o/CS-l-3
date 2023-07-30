@@ -1,11 +1,16 @@
 from tkinter import *
 
 root = Tk()
-root.geometry('800x500')
-root.title('Pavneets Geo Quiz')
-root['bg']='#ffbf00'
+# set the size of the GUI Window
+root.geometry("800x500")
 
-f = ("Times bold", 14)
+# set minimum window size value
+root.minsize(800, 500)
+# set maximum window size value
+root.maxsize(800, 500)
+
+# set the title of the Window
+root.title("Pavneets Geo Quiz")
 
 def nextPage():
     root.destroy()
@@ -15,25 +20,16 @@ def prevPage():
     root.destroy()
     import quizlevels
 
-Label(
-    root,
-    text="This is Third page",
-    padx=20,
-    pady=20,
-    bg='#bfff00'
-).pack(expand=True, fill=BOTH)
-
 Button(
     root, 
     text="Previous Page", 
-    font=f,
     command=prevPage
-    ).pack(fill=X, expand=TRUE, side=LEFT)
+    ).place(x=228, y=432)
 
 Button(
     root, 
     text="Next Page",
     command=nextPage
-    ).pack(fill=X, expand=TRUE, side=LEFT)
+    ).place(x=128, y=332)
 
 root.mainloop()
