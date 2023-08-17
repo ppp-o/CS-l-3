@@ -1,19 +1,11 @@
 from tkinter import *
 
-root = Tk()
-root.geometry('800x500')
-root.title('Pavneets Geo Quiz')
-root['bg']='#ffbf00'
+from quiz import Quiz
+
+root = Quiz()
 
 f = ("Times bold", 14)
 
-def nextPage():
-    root.destroy()
-    import home
-
-def prevPage():
-    root.destroy()
-    import quizlevels
 
 Label(
     root,
@@ -27,13 +19,13 @@ Button(
     root, 
     text="Previous Page", 
     font=f,
-    command=prevPage
-    ).pack(fill=X, expand=TRUE, side=LEFT)
+    command=prev_page
+    ).pack(fill = X, expand = TRUE, side = LEFT)
 
 Button(
-    root, 
+    root,
     text="Next Page",
-    command=nextPage
+    command=next_page
     ).pack(fill=X, expand=TRUE, side=LEFT)
 
 root.mainloop()

@@ -1,26 +1,9 @@
 from tkinter import *
 
-root = Tk()
-root.title('Pavneets Geo Quiz')
+from quiz import Quiz
 
-# set the size of the GUI Window
-root.geometry("800x500")
+root = Quiz("image/quizlevel.png")
 
-# set minimum window size value
-root.minsize(800, 500)
-# set maximum window size value
-root.maxsize(800, 500)
- 
-# Define Image
-bg = PhotoImage(file="image/quizlevel.png")
-
-def nextPage():
-    root.destroy()
-    import startquiz
-
-def prevPage():
-    root.destroy()
-    import home
 
 
 Button(
