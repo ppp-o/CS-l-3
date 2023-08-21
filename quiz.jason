@@ -1,0 +1,14 @@
+{
+    "ques" : [
+    "          which is the largest country in the world?",
+    "          what is the smallest country in the world?"
+    ],
+
+"options" : [
+    ["Russia", "New Zealand", "Cuba", "South Africa"]
+    ["Canada", "Turkry", "Rome", "Vatican City"]
+],
+
+"ans" : [ 1, 4]
+
+}

@@ -10,9 +10,18 @@ root.geometry("800x500")
 root.minsize(800, 500)
 # set maximum window size value
 root.maxsize(800, 500)
- 
+
 #font
-f = ("Times bold", 14)
+f = ("Times bold", 14) 
+
+# and import messagebox as mb from tkinter
+from tkinter import messagebox as mb
+ 
+#import json to use json file for data
+import json
+
+#to generate random set of questions 
+import random
 
 def nextPage():
     root.destroy()
