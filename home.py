@@ -21,6 +21,9 @@ root.title("Pavneets Geo Quiz")
 # Define Image
 bg = PhotoImage(file="image/Homewindow.new.png")
 
+#font
+f = ("Times bold", 14)
+
 # Create a Label
 my_label = Label(root, image=bg)
 my_label.place(x=0, y=0, relwidth=1, relheight=1)
@@ -29,11 +32,11 @@ my_label.place(x=0, y=0, relwidth=1, relheight=1)
 my_frame = Frame(root)
 my_frame.pack(pady=20)
 
-#creating new pages 
+#creating new pages (for quiz )
 
 def nextPage():
     root.destroy()
-    import quizlevels
+    import quizlevel
 
 Button(
     root, 

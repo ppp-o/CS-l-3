@@ -1,6 +1,8 @@
 from tkinter import *
 
 root = Tk()
+root.title('Pavneets Geo Quiz')
+
 # set the size of the GUI Window
 root.geometry("800x500")
 
@@ -8,27 +10,31 @@ root.geometry("800x500")
 root.minsize(800, 500)
 # set maximum window size value
 root.maxsize(800, 500)
+ 
+#font
+f = ("Times bold", 14)
 
-# set the title of the Window
-root.title("Pavneets Geo Quiz")
+# Define Image
+bg = PhotoImage(file="image/quizlevel.png")
 
 def nextPage():
     root.destroy()
-    import home
+    import quiz
 
 def prevPage():
     root.destroy()
-    import quizlevels
+    import home
+
 
 Button(
     root, 
-    text="Previous Page", 
+    text="Home", 
     command=prevPage
     ).place(x=228, y=432)
 
 Button(
     root, 
-    text="Next Page",
+    text="Start quiz", 
     command=nextPage
     ).place(x=128, y=332)
 
