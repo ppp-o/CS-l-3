@@ -30,12 +30,12 @@ Button(
     root, 
     text="Home", 
     command=prevPage
-    ).place(x=228, y=432)
+    ).place(x=150, y=400)
 
 Button(
     root, 
     text="Start quiz", 
     command=nextPage
-    ).place(x=128, y=332)
+    ).place(x=550, y=400)
 
 root.mainloop()

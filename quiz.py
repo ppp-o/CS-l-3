@@ -26,12 +26,12 @@ Button(
     root, 
     text="perv", 
     command=prevPage
-    ).place(x=228, y=332)
+    ).place(x=150, y=400)
 
 Button(
     root, 
     text="home",
     command=nextPage
-    ).place(x=328, y=432)
+    ).place(x=550, y=400)
 
 root.mainloop()
