@@ -25,6 +25,18 @@ bg = PhotoImage(file="image/quizlevel.png")
 my_label = Label(root, image=bg)
 my_label.place(x=0, y=0, relwidth=1, relheight=1)
 
+# creating function to check for vaild login information 
+def check_user_info():
+    name = name_entry.get()
+    age = age_entry.get()
+
+    if not name or not name.isalpha():
+        name_error_label.config(text="No numbers in name ")
+
+    if not age.isdigit() or int(age) < 7 or int(age) > 12:
+        age_error_label.config(text="7-12 only ")
+
+
 #labels for end user name and age 
 name_label = tk.Label(root, text="Name:")
 name_label.pack()
@@ -44,7 +56,7 @@ age_entry.pack()
 age_error_label = tk.Label(root, text="", fg="red")
 age_error_label.pack()
 
-startquiz_button = tk.Button(root, text="Start quiz")
+startquiz_button = tk.Button(root, text="Start quiz", command=check_user_info)
 startquiz_button.pack()
 
 
