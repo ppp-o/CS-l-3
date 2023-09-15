@@ -26,7 +26,7 @@ my_label = Label(root, image=bg)
 my_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 # creating function to check for vaild login information 
-def check_user_info():
+def check_user_info_and_nextPage():
     name = name_entry.get()
     age = age_entry.get()
 
@@ -39,6 +39,9 @@ def check_user_info():
         age_error_label.config(text="7-12 only ")
     else:
         age_error_label.config(text="")
+    if name and name.isalpha() and age.isdigit() and 7 <= int(age) <= 12:
+        root.destroy()
+    import quiz
 
 
 #labels for end user name and age 
@@ -60,13 +63,13 @@ age_entry.pack()
 age_error_label = tk.Label(root, text="", fg="red")
 age_error_label.pack()
 
-startquiz_button = tk.Button(root, text="Start quiz", command=check_user_info)
+startquiz_button = tk.Button(root, text="Start quiz", command=check_user_info_and_nextPage)
 startquiz_button.pack()
 
 
-def nextPage():
+"""def nextPage():
     root.destroy()
-    import quiz
+    import quiz"""
 
 def prevPage():
     root.destroy()
