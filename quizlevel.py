@@ -41,8 +41,7 @@ def check_user_info_and_nextPage():
         age_error_label.config(text="")
     if name and name.isalpha() and age.isdigit() and 7 <= int(age) <= 12:
         root.destroy()
-    import quiz
-
+        import quiz
 
 #labels for end user name and age 
 name_label = tk.Label(root, text="Name:")
@@ -66,11 +65,6 @@ age_error_label.pack()
 startquiz_button = tk.Button(root, text="Start quiz", command=check_user_info_and_nextPage)
 startquiz_button.pack()
 
-
-"""def nextPage():
-    root.destroy()
-    import quiz"""
-
 def prevPage():
     root.destroy()
     import home
@@ -81,11 +75,6 @@ Button(
     command=prevPage
     ).place(x=150, y=400)
 
-"""Button(
-    root, 
-    text="Start quiz", 
-    command=nextPage
-    ).place(x=550, y=400)"""
 
 def Close():
     root.destroy()
