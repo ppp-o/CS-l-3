@@ -32,9 +32,13 @@ def check_user_info():
 
     if not name or not name.isalpha():
         name_error_label.config(text="No numbers in name ")
+    else:
+        name_error_label.config(text="")
 
     if not age.isdigit() or int(age) < 7 or int(age) > 12:
         age_error_label.config(text="7-12 only ")
+    else:
+        age_error_label.config(text="")
 
 
 #labels for end user name and age 
