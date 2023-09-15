@@ -1,4 +1,6 @@
 from tkinter import *
+# and import messagebox as mb from tkinter
+from tkinter import messagebox as mb
 
 root = Tk()
 root.title('Pavneets Geo Quiz')
@@ -16,10 +18,8 @@ f = ("Times bold", 14)
 
 # and import messagebox as mb from tkinter
 from tkinter import messagebox as mb
- 
 #import json to use json file for data
 import json
-
 #to generate random set of questions 
 import random
 
