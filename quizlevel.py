@@ -19,7 +19,7 @@ root.maxsize(800, 500)
 f = ("Times bold", 14)
 
 # Define Image
-bg = PhotoImage(file="image/quizlevel.png")
+bg = PhotoImage(file="image/login.png")
 
 # Create a Label
 my_label = Label(root, image=bg)
@@ -62,6 +62,7 @@ age_entry.pack()
 age_error_label = tk.Label(root, text="", fg="red")
 age_error_label.pack()
 
+#button to start quiz
 startquiz_button = tk.Button(root, text="Start quiz", command=check_user_info_and_nextPage)
 startquiz_button.pack()
 
