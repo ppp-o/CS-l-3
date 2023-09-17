@@ -74,10 +74,23 @@ class Quiz:
         # calculting the percentage of correct answers
         score = int(self.correct / self.data_size * 100)
         result = f"Score: {score}%"
+
+        # button to take end user back to home page
+        def prevPage():
+            root.destroy()
+            import home
+
+        Button(
+            root, 
+            text="Home", 
+            command=prevPage
+            ).place(x=150, y=400)
          
         # message box to display the quiz results to the end user
         mb.showinfo("Result", f"{result}\n{correct}\n{wrong}")
- 
+        mb.geometry("400x200")
+
+
     #checking the answer after end user clicks Next button
     def check_ans(self, q_no):
         # checks if selected option/answer is correct
