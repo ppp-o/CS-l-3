@@ -44,7 +44,7 @@ def check_user_info_and_nextPage():
         name_error_label.config(text="")
 
     if not age.isdigit() or int(age) < 7 or int(age) > 12:
-        age_error_label.config(text="7-12 only ")
+        age_error_label.config(text="7-12 only")
     else:
         age_error_label.config(text="")
     if name and name.isalpha() and age.isdigit() and 7 <= int(age) <= 12:
