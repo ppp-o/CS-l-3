@@ -39,7 +39,7 @@ def check_user_info_and_nextPage():
     age = age_entry.get()
 
     if not name or not name.isalpha():
-        name_error_label.config(text="No numbers in name ")
+        name_error_label.config(text="letters only")
     else:
         name_error_label.config(text="")
 
@@ -59,7 +59,7 @@ name_entry = tk.Entry(root)
 name_entry.place(x = 150, y = 250)
 
 name_error_label = tk.Label(root, text="", fg="red")
-name_error_label.place(x = 200, y = 250)
+name_error_label.place(x = 335, y = 250)
 
 age_label = tk.Label(root, text="Age:")
 age_label.place(x = 100, y = 300)
@@ -68,23 +68,11 @@ age_entry = tk.Entry(root)
 age_entry.place(x = 150, y = 300)
 
 age_error_label = tk.Label(root, text="", fg="red")
-age_error_label.place(x = 200, y = 300)
+age_error_label.place(x = 335, y = 300)
 
 #button to start quiz
 startquiz_button = tk.Button(root, text="Start quiz", command=check_user_info_and_nextPage)
 startquiz_button.place(x = 200, y = 350)
 
-
-#creating new pages (for quiz)
-
-"""def nextPage():
-    root.destroy()
-    import quizlevel
-
-Button(
-    root, 
-    text="click to start", 
-    command=nextPage
-    ).place(x=128, y=332)"""
 
 root.mainloop()
